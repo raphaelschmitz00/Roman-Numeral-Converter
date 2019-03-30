@@ -7,13 +7,15 @@ namespace RomanNumeralConverter.Errors
 
 		public Error(string message)
 		{
-			throw new System.NotImplementedException();
+			IsNone = false;
+			Message = message;
 		}
 
 
 		private Error()
 		{
-			throw new System.NotImplementedException();
+			IsNone = true;
+			Message = "";
 		}
 
 
