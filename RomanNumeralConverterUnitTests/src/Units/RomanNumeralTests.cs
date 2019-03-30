@@ -9,7 +9,7 @@ namespace RomanNumeralConverterUnitTests.Units
 	public class RomanNumeralTests
 	{
 		[Test]
-		public void CantBeConstructedWithNullString()
+		public void CantBeConstructedWithNullArgument()
 		{
 			Assert.Throws<ArgumentNullException>(() => new RomanNumeral(null));
 		}
