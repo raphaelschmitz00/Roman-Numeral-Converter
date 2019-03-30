@@ -4,17 +4,20 @@ namespace RomanNumeralConverter.Errors
 	{
 		public Attempt(Error error)
 		{
-			throw new System.NotImplementedException();
+			Error = error;
+			Failed = true;
 		}
 
 
-		public Attempt(T value)
+		public Attempt(T result)
 		{
-			Value = value;
+			Result = result;
+			Failed = false;
 		}
 
 
-		public bool Failed { get; set; }
-		public T Value { get; set; }
+		public bool Failed { get; }
+		public Error Error { get; }
+		public T Result { get; }
 	}
 }

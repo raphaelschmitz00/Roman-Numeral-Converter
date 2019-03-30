@@ -27,7 +27,7 @@ namespace RomanNumeralConverterUnitTests.Converters
 
 			Attempt<int> result = romanToArabicConverter.Convert(inRoman);
 
-			Assert.AreEqual(3, result.Value);
+			Assert.AreEqual(3, result.Result);
 		}
 
 
@@ -39,7 +39,7 @@ namespace RomanNumeralConverterUnitTests.Converters
 
 			Attempt<int> result = romanToArabicConverter.Convert(inRoman);
 
-			Assert.AreEqual(4, result.Value);
+			Assert.AreEqual(4, result.Result);
 		}
 
 
@@ -51,7 +51,7 @@ namespace RomanNumeralConverterUnitTests.Converters
 
 			Attempt<int> result = romanToArabicConverter.Convert(inRoman);
 
-			Assert.AreEqual(6, result.Value);
+			Assert.AreEqual(6, result.Result);
 		}
 
 
@@ -63,7 +63,7 @@ namespace RomanNumeralConverterUnitTests.Converters
 
 			Attempt<int> result = romanToArabicConverter.Convert(inRoman);
 
-			Assert.AreEqual(9, result.Value);
+			Assert.AreEqual(9, result.Result);
 		}
 
 
@@ -75,7 +75,7 @@ namespace RomanNumeralConverterUnitTests.Converters
 
 			Attempt<int> result = romanToArabicConverter.Convert(inRoman);
 
-			Assert.AreEqual(12, result.Value);
+			Assert.AreEqual(12, result.Result);
 		}
 	}
 }

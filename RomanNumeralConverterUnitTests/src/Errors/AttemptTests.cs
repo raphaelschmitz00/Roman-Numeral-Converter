@@ -20,6 +20,19 @@ namespace RomanNumeralConverterUnitTests.Errors
 
 
 		[Test]
+		public void ErrorIsPassedOnCorrectly()
+		{
+			string message = "Bad thing Happened!";
+			Error error = new Error(message);
+			Attempt<string> attempt = new Attempt<string>(error);
+
+			Error result = attempt.Error;
+
+			Assert.AreEqual(error, result);
+		}
+
+
+		[Test]
 		public void AttemptWithNoneErrorDoesNotCountAsFailed()
 		{
 			string message = "Bad thing Happened!";
@@ -37,7 +50,7 @@ namespace RomanNumeralConverterUnitTests.Errors
 			string message = "Bad thing Happened!";
 			Attempt<string> attempt = new Attempt<string>(message);
 
-			string result = attempt.Value;
+			string result = attempt.Result;
 
 			Assert.AreEqual(message, result);
 		}
