@@ -1,0 +1,12 @@
+
+# Builds
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+
+# IDEs
+.idea/
+RomanNumeralConverter.sln.DotSettings.user
