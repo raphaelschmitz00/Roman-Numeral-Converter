@@ -1,9 +1,13 @@
-﻿namespace RomanNumeralConverter
+﻿using System;
+
+
+namespace RomanNumeralConverter
 {
-	internal class Program
+	public class Program
 	{
 		public static void Main(string[] args)
 		{
+			Console.WriteLine("Program run");
 		}
 	}
 }
