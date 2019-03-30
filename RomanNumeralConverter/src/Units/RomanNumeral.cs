@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using RomanNumeralConverter.Utilities;
 
 
 namespace RomanNumeralConverter.Units
@@ -11,7 +12,7 @@ namespace RomanNumeralConverter.Units
 
 		public RomanNumeral(List<RomanNumeralLetter> letters)
 		{
-			_letters = letters;
+			_letters = Validate.NotNull(letters);
 		}
 
 
