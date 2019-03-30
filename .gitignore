@@ -10,3 +10,7 @@ x64/
 # IDEs
 .idea/
 RomanNumeralConverter.sln.DotSettings.user
+
+# NuGet
+packages/
+
