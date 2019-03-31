@@ -6,6 +6,7 @@ namespace RomanNumeralConverter.Converters.ValueGatherers
 	public class ValueGatherer
 	{
 		private int _currentValue;
+		private RomanDigit _lastDigit;
 
 
 		public ValueGatherer()
@@ -16,8 +17,40 @@ namespace RomanNumeralConverter.Converters.ValueGatherers
 
 		public void Add(RomanDigit romanDigit)
 		{
-			if (romanDigit.Value > _currentValue) _currentValue = romanDigit.Value - _currentValue;
-			else _currentValue += romanDigit.Value;
+			bool previousValueWasSmaller = _lastDigit != null && romanDigit.Value > _lastDigit.Value;
+			if (previousValueWasSmaller) CalculateSubtractiveNotation(romanDigit);
+			else AddValue(romanDigit.Value);
+			_lastDigit = romanDigit;
+		}
+
+
+		/// <summary>
+		/// With subtractive notation, XIV does not represent the same number as XVI (16) but rather is an alternative
+		/// way of writing XIIII (14).
+		/// </summary>
+		private void CalculateSubtractiveNotation(RomanDigit romanDigit)
+		{
+			UndoLastAddition();
+			int combinedValue = CombineWithPreviousValue(romanDigit);
+			AddValue(combinedValue);
+		}
+
+
+		private void UndoLastAddition()
+		{
+			_currentValue -= _lastDigit.Value;
+		}
+
+
+		private int CombineWithPreviousValue(RomanDigit romanDigit)
+		{
+			return romanDigit.Value - _lastDigit.Value;
+		}
+
+
+		private void AddValue(int value)
+		{
+			_currentValue += value;
 		}
 
 
