@@ -1,5 +1,5 @@
+using RomanNumeralConverter.ArgumentParsers;
 using RomanNumeralConverter.Converters.ArabicToRoman;
-using RomanNumeralConverter.Converters.ArgumentParsers;
 using RomanNumeralConverter.Converters.RomanToArabic;
 using RomanNumeralConverter.Errors;
 
@@ -34,8 +34,7 @@ namespace RomanNumeralConverter.Converters
 			Attempt<int> romanAttempt = _romanToArabicConverter.Convert(firstArgument);
 			if (!romanAttempt.Failed) return new Attempt<string>(romanAttempt.Result.ToString());
 
-			Error error = new Error("Can't parse input!");
-			return new Attempt<string>(error);
+			return new Attempt<string>(ErrorRegistry.CantParseInput);
 		}
 	}
 }

@@ -39,6 +39,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\ArgumentParsers\ArgumentParser.cs" />
+    <Compile Include="src\ArgumentParsers\IArgumentParser.cs" />
     <Compile Include="src\Converters\ArabicToRoman\ArabicToRomanConverter.cs" />
     <Compile Include="src\Converters\ArabicToRoman\ArabicToRomanConverterFactory.cs" />
     <Compile Include="src\Converters\ArabicToRoman\DigitConverterList.cs" />
@@ -47,7 +49,6 @@
     <Compile Include="src\Converters\ArabicToRoman\IDigitConverter.cs" />
     <Compile Include="src\Converters\ArabicToRoman\IDigitConverterList.cs" />
     <Compile Include="src\Converters\ArabicToRoman\SimpleDigitConverter.cs" />
-    <Compile Include="src\Converters\ArgumentParsers\IArgumentParser.cs" />
     <Compile Include="src\Converters\InputConverter.cs" />
     <Compile Include="src\Converters\RomanToArabic\IRomanNumeralValidator.cs" />
     <Compile Include="src\Converters\RomanToArabic\IValueGatherer.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="src\Converters\RomanToArabic\ValueGatherer.cs" />
     <Compile Include="src\Errors\Attempt.cs" />
     <Compile Include="src\Errors\Error.cs" />
+    <Compile Include="src\Errors\ErrorRegistry.cs" />
     <Compile Include="src\InputConverterFactory.cs" />
     <Compile Include="src\InputValidators\ArabicNumeralValidator.cs" />
     <Compile Include="src\InputValidators\RomanNumeralValidator.cs" />
