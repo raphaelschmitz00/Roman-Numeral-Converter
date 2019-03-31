@@ -47,9 +47,9 @@
     <Compile Include="src\Converters\DigitConverters\EscalatingDigitConverterTests.cs" />
     <Compile Include="src\Converters\DigitConverters\SimpleDigitConverterTests.cs" />
     <Compile Include="src\Converters\RomanToArabicConverterTests.cs" />
+    <Compile Include="src\Converters\ValueGatherers\ValueGathererTests.cs" />
     <Compile Include="src\Errors\AttemptTests.cs" />
     <Compile Include="src\Errors\ErrorTests.cs" />
-    <Compile Include="src\Units\RomanNumeralTests.cs" />
     <Compile Include="src\Utilities\ValidateTests.cs" />
   </ItemGroup>
   <ItemGroup>
