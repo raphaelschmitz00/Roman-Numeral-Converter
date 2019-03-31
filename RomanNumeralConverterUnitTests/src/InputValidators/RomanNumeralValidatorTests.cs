@@ -47,5 +47,27 @@ namespace RomanNumeralConverterUnitTests.InputValidators
 
 			Assert.IsTrue(result);
 		}
+
+
+		[Test]
+		public void RandomLetterIsRejected()
+		{
+			string inRoman = "MDCCLXXVIA";
+
+			bool result = _romanNumeralValidator.IsARomanNumber(inRoman);
+
+			Assert.IsFalse(result);
+		}
+
+
+		[Test]
+		public void SpecialCharIsRejected()
+		{
+			string inRoman = "MDCCLXXVI!";
+
+			bool result = _romanNumeralValidator.IsARomanNumber(inRoman);
+
+			Assert.IsFalse(result);
+		}
 	}
 }
