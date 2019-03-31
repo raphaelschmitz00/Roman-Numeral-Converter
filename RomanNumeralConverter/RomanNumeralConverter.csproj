@@ -57,6 +57,7 @@
     <Compile Include="src\Errors\Error.cs" />
     <Compile Include="src\InputConverterFactory.cs" />
     <Compile Include="src\InputValidators\ArabicNumeralValidator.cs" />
+    <Compile Include="src\InputValidators\RomanNumeralValidator.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="src\Units\RomanDigit.cs" />
     <Compile Include="src\Utilities\Validate.cs" />

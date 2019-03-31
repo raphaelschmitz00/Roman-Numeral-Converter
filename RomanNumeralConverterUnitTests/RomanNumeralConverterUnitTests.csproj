@@ -68,6 +68,7 @@
     <Compile Include="src\Errors\AttemptTests.cs" />
     <Compile Include="src\Errors\ErrorTests.cs" />
     <Compile Include="src\InputValidators\ArabicNumeralValidatorTests.cs" />
+    <Compile Include="src\InputValidators\RomanNumeralValidatorTests.cs" />
     <Compile Include="src\Utilities\ValidateTests.cs" />
   </ItemGroup>
   <ItemGroup>
