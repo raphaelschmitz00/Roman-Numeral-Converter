@@ -66,7 +66,7 @@ namespace RomanNumeralConverterUnitTests.Converters
 		{
 			string inRoman = _arabicToRomanConverter.Convert(39);
 
-			Assert.AreEqual("XXXIX.", inRoman);
+			Assert.AreEqual("XXXIX", inRoman);
 		}
 
 
@@ -84,7 +84,7 @@ namespace RomanNumeralConverterUnitTests.Converters
 		{
 			string inRoman = _arabicToRomanConverter.Convert(207);
 
-			Assert.AreEqual(" CCVII", inRoman);
+			Assert.AreEqual("CCVII", inRoman);
 		}
 
 
