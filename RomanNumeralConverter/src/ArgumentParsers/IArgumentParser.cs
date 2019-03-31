@@ -1,7 +1,7 @@
 using RomanNumeralConverter.Errors;
 
 
-namespace RomanNumeralConverter.Converters.ArgumentParsers
+namespace RomanNumeralConverter.ArgumentParsers
 {
 	public interface IArgumentParser
 	{
