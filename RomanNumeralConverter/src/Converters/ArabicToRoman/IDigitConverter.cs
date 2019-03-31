@@ -1,4 +1,4 @@
-namespace RomanNumeralConverter.Converters.DigitConverters
+namespace RomanNumeralConverter.Converters.ArabicToRoman
 {
 	public interface IDigitConverter
 	{

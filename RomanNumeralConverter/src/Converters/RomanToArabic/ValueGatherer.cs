@@ -1,9 +1,9 @@
 using RomanNumeralConverter.Units;
 
 
-namespace RomanNumeralConverter.Converters.ValueGatherers
+namespace RomanNumeralConverter.Converters.RomanToArabic
 {
-	public class ValueGatherer
+	public class ValueGatherer : IValueGatherer
 	{
 		private int _currentValue;
 		private RomanDigit _lastDigit;
@@ -15,12 +15,24 @@ namespace RomanNumeralConverter.Converters.ValueGatherers
 		}
 
 
+		public void Reset()
+		{
+			_currentValue = 0;
+		}
+
+
 		public void Add(RomanDigit romanDigit)
 		{
 			bool previousValueWasSmaller = _lastDigit != null && romanDigit.Value > _lastDigit.Value;
 			if (previousValueWasSmaller) CalculateSubtractiveNotation(romanDigit);
 			else AddValue(romanDigit.Value);
 			_lastDigit = romanDigit;
+		}
+
+
+		public int GetValue()
+		{
+			return _currentValue;
 		}
 
 
@@ -51,12 +63,6 @@ namespace RomanNumeralConverter.Converters.ValueGatherers
 		private void AddValue(int value)
 		{
 			_currentValue += value;
-		}
-
-
-		public int GetValue()
-		{
-			return _currentValue;
 		}
 	}
 }

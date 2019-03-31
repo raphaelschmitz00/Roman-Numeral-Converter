@@ -4,11 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2AA0FA50-82B5-492E-9F05-A4A28B5AE9E4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{167B767E-04C2-4CC8-9248-C8A1C971449D}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RomanNumeralConverter</RootNamespace>
-    <AssemblyName>RomanNumeralConverter</AssemblyName>
+    <RootNamespace>RomanNumeralConverterIntegrationTests</RootNamespace>
+    <AssemblyName>RomanNumeralConverterIntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -36,31 +37,21 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
+    <Reference Include="nunit.framework, Version=3.5.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb">
+      <HintPath>..\packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\ArabicToRomanTests.cs" />
+    <Compile Include="src\RomanToArabicTests.cs" />
+    <Compile Include="Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="src\Converters\ArabicToRoman\ArabicToRomanConverter.cs" />
-    <Compile Include="src\Converters\ArabicToRoman\ArabicToRomanConverterFactory.cs" />
-    <Compile Include="src\Converters\ArabicToRoman\DigitConverterList.cs" />
-    <Compile Include="src\Converters\ArabicToRoman\EscalatingDigitConverter.cs" />
-    <Compile Include="src\Converters\ArabicToRoman\IArabicNumeralValidator.cs" />
-    <Compile Include="src\Converters\ArabicToRoman\IDigitConverter.cs" />
-    <Compile Include="src\Converters\ArabicToRoman\IDigitConverterList.cs" />
-    <Compile Include="src\Converters\ArabicToRoman\SimpleDigitConverter.cs" />
-    <Compile Include="src\Converters\ArgumentParsers\IArgumentParser.cs" />
-    <Compile Include="src\Converters\InputConverter.cs" />
-    <Compile Include="src\Converters\RomanToArabic\IRomanNumeralValidator.cs" />
-    <Compile Include="src\Converters\RomanToArabic\IValueGatherer.cs" />
-    <Compile Include="src\Converters\RomanToArabic\RomanToArabicConverter.cs" />
-    <Compile Include="src\Converters\RomanToArabic\ValueGatherer.cs" />
-    <Compile Include="src\Errors\Attempt.cs" />
-    <Compile Include="src\Errors\Error.cs" />
-    <Compile Include="src\InputConverterFactory.cs" />
-    <Compile Include="src\InputValidators\ArabicNumeralValidator.cs" />
-    <Compile Include="src\Program.cs" />
-    <Compile Include="src\Units\RomanDigit.cs" />
-    <Compile Include="src\Units\RomanNumeral.cs" />
-    <Compile Include="src\Utilities\Validate.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RomanNumeralConverter\RomanNumeralConverter.csproj">
+      <Project>{2aa0fa50-82b5-492e-9f05-a4a28b5ae9e4}</Project>
+      <Name>RomanNumeralConverter</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

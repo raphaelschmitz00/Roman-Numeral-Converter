@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumeralConverter", "Ro
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumeralConverterUnitTests", "RomanNumeralConverterUnitTests\RomanNumeralConverterUnitTests.csproj", "{9EC707A3-CC79-4976-B59A-40728AB09FA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RomanNumeralConverterIntegrationTests", "RomanNumeralConverterIntegrationTests\RomanNumeralConverterIntegrationTests.csproj", "{167B767E-04C2-4CC8-9248-C8A1C971449D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{9EC707A3-CC79-4976-B59A-40728AB09FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EC707A3-CC79-4976-B59A-40728AB09FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EC707A3-CC79-4976-B59A-40728AB09FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{167B767E-04C2-4CC8-9248-C8A1C971449D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167B767E-04C2-4CC8-9248-C8A1C971449D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167B767E-04C2-4CC8-9248-C8A1C971449D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167B767E-04C2-4CC8-9248-C8A1C971449D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
