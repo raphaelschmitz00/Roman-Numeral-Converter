@@ -1,9 +1,9 @@
 using NUnit.Framework;
-using RomanNumeralConverter.Converters.DigitConverters;
+using RomanNumeralConverter.Converters.ArabicToRoman;
 using RomanNumeralConverter.Units;
 
 
-namespace RomanNumeralConverterUnitTests.Converters.DigitConverters
+namespace RomanNumeralConverterUnitTests.Converters.ArabicToRoman
 {
 	public class EscalatingDigitConverterTests
 	{

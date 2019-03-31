@@ -1,9 +1,9 @@
 using NUnit.Framework;
-using RomanNumeralConverter.Converters.ValueGatherers;
+using RomanNumeralConverter.Converters.RomanToArabic;
 using RomanNumeralConverter.Units;
 
 
-namespace RomanNumeralConverterUnitTests.Converters.ValueGatherers
+namespace RomanNumeralConverterUnitTests.Converters.RomanToArabic
 {
 	public class ValueGathererTests
 	{

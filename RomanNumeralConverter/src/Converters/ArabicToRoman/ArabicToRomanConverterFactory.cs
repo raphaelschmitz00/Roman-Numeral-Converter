@@ -1,25 +1,15 @@
+using System;
 using System.Collections.Generic;
-using System.Text;
-using RomanNumeralConverter.Converters.DigitConverters;
 using RomanNumeralConverter.Units;
 
 
-namespace RomanNumeralConverter.Converters
+namespace RomanNumeralConverter.Converters.ArabicToRoman
 {
-	public class ArabicToRomanConverter
+	public class ArabicToRomanConverterFactory
 	{
-		public string Convert(int arabic)
+		public ArabicToRomanConverter Create()
 		{
-			List<IDigitConverter> digitConverters = CreateListOfDigitConverters();
-
-			StringBuilder stringBuilder = new StringBuilder();
-			foreach (IDigitConverter digitConverter in digitConverters)
-			{
-				string digitInRoman = digitConverter.GetRomanNumeralForPosition(arabic);
-				stringBuilder.Append(digitInRoman);
-			}
-
-			return stringBuilder.ToString();
+			throw new NotImplementedException();
 		}
 
 

@@ -3,7 +3,7 @@ using RomanNumeralConverter.Units;
 using RomanNumeralConverter.Utilities;
 
 
-namespace RomanNumeralConverter.Converters.DigitConverters
+namespace RomanNumeralConverter.Converters.ArabicToRoman
 {
 	public class SimpleDigitConverter : IDigitConverter
 	{

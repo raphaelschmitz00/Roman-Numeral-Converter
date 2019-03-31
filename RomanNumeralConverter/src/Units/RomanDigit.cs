@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+
+
 namespace RomanNumeralConverter.Units
 {
 	public class RomanDigit
@@ -9,6 +12,8 @@ namespace RomanNumeralConverter.Units
 		public static readonly RomanDigit C = new RomanDigit('C', 100);
 		public static readonly RomanDigit D = new RomanDigit('D', 500);
 		public static readonly RomanDigit M = new RomanDigit('M', 1000);
+
+		public static readonly List<RomanDigit> All = new List<RomanDigit> {I, V, X, L, C, D, M};
 
 
 		private RomanDigit(char letter, int value)
