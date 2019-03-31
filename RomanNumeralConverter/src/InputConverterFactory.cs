@@ -1,6 +1,8 @@
-using System;
+using RomanNumeralConverter.ArgumentParsers;
 using RomanNumeralConverter.Converters;
 using RomanNumeralConverter.Converters.ArabicToRoman;
+using RomanNumeralConverter.Converters.RomanToArabic;
+using RomanNumeralConverter.InputValidators;
 using RomanNumeralConverter.Units;
 
 
@@ -10,11 +12,30 @@ namespace RomanNumeralConverter
 	{
 		public InputConverter ComposeInputConverter()
 		{
-			throw new NotImplementedException();
+			IArgumentParser argumentParser = new ArgumentParser();
+			ArabicToRomanConverter arabicToRomanConverter = CreateArabicToRomanConverter();
+			RomanToArabicConverter romanToArabicConverter = CreateRomanToArabicConverter();
+			return new InputConverter(argumentParser, arabicToRomanConverter, romanToArabicConverter);
 		}
 
 
-		public DigitConverterList CreateListOfDigitConverters()
+		private ArabicToRomanConverter CreateArabicToRomanConverter()
+		{
+			IArabicNumeralValidator arabicNumeralValidator = new ArabicNumeralValidator();
+			DigitConverterList digitConverterList = CreateDigitConverterList();
+			return new ArabicToRomanConverter(arabicNumeralValidator, digitConverterList);
+		}
+
+
+		private RomanToArabicConverter CreateRomanToArabicConverter()
+		{
+			IRomanNumeralValidator romanNumeralValidator = new RomanNumeralValidator();
+			IValueGatherer valueGatherer = new ValueGatherer();
+			return new RomanToArabicConverter(romanNumeralValidator, valueGatherer);
+		}
+
+
+		private DigitConverterList CreateDigitConverterList()
 		{
 			DigitConverterList digitConverterList = new DigitConverterList();
 			digitConverterList.Add(new SimpleDigitConverter(RomanDigit.M));

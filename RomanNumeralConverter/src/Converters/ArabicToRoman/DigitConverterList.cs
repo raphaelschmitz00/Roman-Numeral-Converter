@@ -21,12 +21,11 @@ namespace RomanNumeralConverter.Converters.ArabicToRoman
 			_digitConverters.Add(digitConverter);
 		}
 
-		
-		
+
 		public string Convert(int arabic)
 		{
-			IOrderedEnumerable<IDigitConverter> digitConverters = _digitConverters.OrderBy(x => x.Position);
-			
+			IOrderedEnumerable<IDigitConverter> digitConverters = _digitConverters.OrderByDescending(x => x.Position);
+
 			StringBuilder stringBuilder = new StringBuilder();
 			foreach (IDigitConverter digitConverter in digitConverters)
 			{
