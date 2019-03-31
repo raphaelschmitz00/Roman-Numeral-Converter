@@ -5,18 +5,25 @@ namespace RomanNumeralConverter.Converters.ValueGatherers
 {
 	public class ValueGatherer
 	{
-		public bool CanAddLetters { get; private set; }
+		private int _currentValue;
+
+
+		public ValueGatherer()
+		{
+			_currentValue = 0;
+		}
 
 
 		public void Add(RomanDigit romanDigit)
 		{
-			throw new System.NotImplementedException();
+			if (romanDigit.Value > _currentValue) _currentValue = romanDigit.Value - _currentValue;
+			else _currentValue += romanDigit.Value;
 		}
 
 
 		public int GetValue()
 		{
-			throw new System.NotImplementedException();
+			return _currentValue;
 		}
 	}
 }
