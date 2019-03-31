@@ -10,12 +10,7 @@ namespace RomanNumeralConverter.Converters
 	{
 		public string Convert(int arabic)
 		{
-			List<IDigitConverter> digitConverters = new List<IDigitConverter>();
-			digitConverters.Add(new SimpleDigitConverter(RomanDigit.M));
-			digitConverters.Add(new EscalatingDigitConverter(RomanDigit.C, RomanDigit.D, RomanDigit.M));
-			digitConverters.Add(new EscalatingDigitConverter(RomanDigit.X, RomanDigit.L, RomanDigit.C));
-			digitConverters.Add(new EscalatingDigitConverter(RomanDigit.I, RomanDigit.V, RomanDigit.X));
-
+			List<IDigitConverter> digitConverters = CreateListOfDigitConverters();
 
 			StringBuilder stringBuilder = new StringBuilder();
 			foreach (IDigitConverter digitConverter in digitConverters)
@@ -25,6 +20,17 @@ namespace RomanNumeralConverter.Converters
 			}
 
 			return stringBuilder.ToString();
+		}
+
+
+		private List<IDigitConverter> CreateListOfDigitConverters()
+		{
+			List<IDigitConverter> digitConverters = new List<IDigitConverter>();
+			digitConverters.Add(new SimpleDigitConverter(RomanDigit.M));
+			digitConverters.Add(new EscalatingDigitConverter(RomanDigit.C, RomanDigit.D, RomanDigit.M));
+			digitConverters.Add(new EscalatingDigitConverter(RomanDigit.X, RomanDigit.L, RomanDigit.C));
+			digitConverters.Add(new EscalatingDigitConverter(RomanDigit.I, RomanDigit.V, RomanDigit.X));
+			return digitConverters;
 		}
 	}
 }

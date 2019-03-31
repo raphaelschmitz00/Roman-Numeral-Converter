@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Converters\ArabicToRomanConverterTests.cs" />
+    <Compile Include="src\Converters\DigitConverters\EscalatingDigitConverterTests.cs" />
+    <Compile Include="src\Converters\DigitConverters\SimpleDigitConverterTests.cs" />
     <Compile Include="src\Converters\RomanToArabicConverterTests.cs" />
     <Compile Include="src\Errors\AttemptTests.cs" />
     <Compile Include="src\Errors\ErrorTests.cs" />
