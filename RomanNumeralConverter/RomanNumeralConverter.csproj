@@ -44,10 +44,10 @@
     <Compile Include="src\Converters\DigitConverters\IDigitConverter.cs" />
     <Compile Include="src\Converters\DigitConverters\SimpleDigitConverter.cs" />
     <Compile Include="src\Converters\RomanToArabicConverter.cs" />
+    <Compile Include="src\Converters\ValueGatherers\ValueGatherer.cs" />
     <Compile Include="src\Errors\Attempt.cs" />
     <Compile Include="src\Errors\Error.cs" />
     <Compile Include="src\Program.cs" />
-    <Compile Include="src\Units\RomanNumeral.cs" />
     <Compile Include="src\Units\RomanDigit.cs" />
     <Compile Include="src\Utilities\Validate.cs" />
   </ItemGroup>
