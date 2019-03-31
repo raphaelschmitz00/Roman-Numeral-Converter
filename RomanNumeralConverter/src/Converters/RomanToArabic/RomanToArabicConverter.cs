@@ -21,7 +21,7 @@ namespace RomanNumeralConverter.Converters.RomanToArabic
 		public Attempt<int> Convert(string input)
 		{
 			bool isARomanNumber = _romanNumeralValidator.IsARomanNumber(input);
-			if (!isARomanNumber) return new Attempt<int>(new Error("Not a roman numeral!"));
+			if (!isARomanNumber) return new Attempt<int>(ErrorRegistry.NotARomanNumeral);
 
 			_valueGatherer.Reset();
 			foreach (char character in input)

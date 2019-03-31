@@ -11,8 +11,7 @@ namespace RomanNumeralConverter.InputValidators
 			int intValue;
 			bool itWorked = int.TryParse(input, out intValue);
 			if (itWorked) return new Attempt<int>(intValue);
-			Error error = new Error("Not an arabic number!");
-			return new Attempt<int>(error);
+			return new Attempt<int>(ErrorRegistry.NotAnArabicNumber);
 		}
 	}
 }
