@@ -40,12 +40,15 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Converters\ArabicToRomanConverter.cs" />
+    <Compile Include="src\Converters\DigitConverters\EscalatingDigitConverter.cs" />
+    <Compile Include="src\Converters\DigitConverters\IDigitConverter.cs" />
+    <Compile Include="src\Converters\DigitConverters\SimpleDigitConverter.cs" />
     <Compile Include="src\Converters\RomanToArabicConverter.cs" />
     <Compile Include="src\Errors\Attempt.cs" />
     <Compile Include="src\Errors\Error.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="src\Units\RomanNumeral.cs" />
-    <Compile Include="src\Units\RomanNumeralLetter.cs" />
+    <Compile Include="src\Units\RomanDigit.cs" />
     <Compile Include="src\Utilities\Validate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

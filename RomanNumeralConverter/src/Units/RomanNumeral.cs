@@ -7,15 +7,15 @@ namespace RomanNumeralConverter.Units
 {
 	public class RomanNumeral
 	{
-		private readonly List<RomanNumeralLetter> _letters;
+		private readonly List<RomanDigit> _letters;
 
 
-		public RomanNumeral(List<RomanNumeralLetter> letters)
+		public RomanNumeral(List<RomanDigit> letters)
 		{
 			_letters = Validate.NotNull(letters);
 		}
 
 
-		public List<RomanNumeralLetter> Letters => _letters.ToList();
+		public List<RomanDigit> Letters => _letters.ToList();
 	}
 }
