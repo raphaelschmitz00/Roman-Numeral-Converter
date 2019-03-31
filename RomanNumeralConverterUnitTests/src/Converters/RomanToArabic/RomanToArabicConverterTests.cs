@@ -25,25 +25,22 @@ namespace RomanNumeralConverterUnitTests.Converters.RomanToArabic
 		[Test]
 		public void FailedValidationLeadsToFailedResult()
 		{
-			Error error = new Error("FAIL");
-			Attempt<string> fail = new Attempt<string>(error);
-			_validatorMock.Setup(x => x.ConvertToRomanNumber(It.IsAny<string>())).Returns(fail);
+			_validatorMock.Setup(x => x.IsARomanNumber(It.IsAny<string>())).Returns(false);
 
 			Attempt<int> attempt = _romanToArabicConverter.Convert("3");
 
-			Assert.IsFalse(attempt.Failed);
+			Assert.IsTrue(attempt.Failed);
 		}
 
 
 		[Test]
 		public void PositiveValidationReturnsTheDigitConverterResult()
 		{
-			Attempt<string> success = new Attempt<string>("");
-			_validatorMock.Setup(x => x.ConvertToRomanNumber(It.IsAny<string>())).Returns(success);
+			_validatorMock.Setup(x => x.IsARomanNumber(It.IsAny<string>())).Returns(true);
 			int returnValue = 3;
 			_valueGathererMock.Setup(x => x.GetValue()).Returns(returnValue);
 
-			Attempt<int> attempt = _romanToArabicConverter.Convert("3");
+			Attempt<int> attempt = _romanToArabicConverter.Convert("II");
 
 			Assert.AreEqual(returnValue, attempt.Result);
 		}

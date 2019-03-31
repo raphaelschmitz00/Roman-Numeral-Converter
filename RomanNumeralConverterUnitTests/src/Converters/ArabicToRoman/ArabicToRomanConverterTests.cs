@@ -31,7 +31,7 @@ namespace RomanNumeralConverterUnitTests.Converters.ArabicToRoman
 
 			Attempt<string> attempt = _arabicToRomanConverter.Convert("3");
 
-			Assert.IsFalse(attempt.Failed);
+			Assert.IsTrue(attempt.Failed);
 		}
 
 
